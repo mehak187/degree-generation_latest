@@ -1,0 +1,136 @@
+/* -------sahil-------- */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --light-grey: #F0EFF0;
+    --white:#ffffff;
+    --red:#AC0606;
+}
+.color-red{
+    color: var(--red);
+}
+.btn-bg{
+    background-color: var(--blue);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--white);
+}
+.color-blue{
+    color: var(--blue);
+}
+.setting-size{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey);
+}
+.btn-update {
+    border: 1px solid var(--blue);
+    padding: 10px 20px;
+    color: var(--blue);
+    border-radius: 10px;
+    background-color: transparent;
+}
+.focus-none:focus{
+    outline: none;
+    box-shadow: none;
+}
+.form-bg{
+    border: 1px solid rgba(233, 233, 233, 1);
+    background-color: rgba(233,233,233,1);
+}
+.btn-save {
+    background-color: var(--blue);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: var(--white);
+    border: none;
+}
+.btn-delete{
+    background-color: var(--red);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: var(--white);
+    border: none;
+}
+.fileinput {
+    display: none;
+}
+.imgview {
+    background-color: var(--light-grey);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: cover;
+}
+.plus {
+    position: absolute;
+    color: rgb(45, 225, 73);
+    top: 85px;
+    right: -6px;
+    font-size: 30px;
+}
+.imguni {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: fit;
+    position: relative;
+}
+.check-uni:checked {
+    background-color: var(--blue);
+    border-color: transparent;
+}
+.modal-width{
+    max-width: 1000px;
+}
+.modal-close {
+    background-color: black; 
+    border-radius: 50%; 
+    width: 25px;
+    height: 25px;
+    display: flex;           
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;            
+}
+
+.modal-close::before {
+    content: '×';
+    color: white;
+}
+
+.modal-close:hover {
+    background-color: black;
+}
+
+@media screen and (max-width:576px){
+    .btn-update {
+        border: 1px solid var(--blue);
+        padding:7px 13px;
+        color: var(--blue);
+        border-radius: 10px;
+        background-color: transparent;
+    }
+    .btn-save {
+        background-color: var(--blue);
+        padding: 8px 16px;
+        border-radius: 10px;
+        color: var(--white);
+        border: none;
+    }
+    .btn-delete{
+        background-color: var(--red);
+        padding: 8px 15px;
+        border-radius: 10px;
+        color: var(--white);
+        border: none;
+    }
+}

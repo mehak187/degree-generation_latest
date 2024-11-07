@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 30px; /* Adjust for spacing */
+}
+
+.custom-checkbox input {
+    opacity: 0; /* Hide the default checkbox */
+    position: absolute;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px; /* Size of the checkbox */
+    width: 20px;
+    background-color: #ccc; /* Default background color */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: #4CAF50; /* Background color when checked */
+}
+
+/* Optional: Change color on hover */
+.custom-checkbox:hover .checkmark {
+    background-color: #aaa;
+}
+
+    </style>
+</head>
+<body>
+    <label class="custom-checkbox">
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+        Custom Checkbox
+    </label>
+    
+
+
+    <script>
+        document.querySelectorAll('.custom-checkbox input').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            this.nextElementSibling.style.backgroundColor = '#4CAF50'; // Checked color
+        } else {
+            this.nextElementSibling.style.backgroundColor = '#ccc'; // Default color
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

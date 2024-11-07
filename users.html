@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main1.css">
+    <link rel="stylesheet" href="/css/main2.css">
+    <title>Users</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid px-0">
+            <div class="d-flex main-h position-relative">
+                <div class="main-board">
+                    <div class="main-board1">
+                        <div class="max-h position-relative">
+                            <div class="text-end text-x">
+                                <i class="bi bi-x-circle" id="hideButton"></i>
+                            </div>
+                            <div class="text-center">
+                                <a href="#"><img src="img/logo.png" alt="" class="logo-img2"></a>
+                            </div>
+                        </div>
+                        <div class="list-board">
+                            <ul class="list-unstyled list-ul">
+                                <li><a href="dashboard.html" class="active list-style"><img src="img/home-smile.png"
+                                            alt="">Dashboard</a></li>
+                                <li><a href="invoice.html" class="list-style"><img src="img/invoice.png"
+                                            alt="">Invoices</a></li>
+                                <li><a href="file-maker.html" class="list-style"><img src="img/file-plus.png"
+                                            alt="">File Maker</a></li>
+                                <li><a href="project.html" class="list-style"><img src="img/bill-line.png"
+                                            alt="">Projects</a></li>
+                                <li><a href="employee.html" class="list-style"><img src="img/nurse-line.png"
+                                            alt="">Employee</a></li>
+                                <li><a href="request.html" class="list-style"><img src="img/code-pull.png"
+                                            alt="">Requests</a></li>
+                                <li><a href="report.html" class="list-style"><img src="img/report.png"
+                                            alt="">Reports</a></li>
+                                <li><a href="setting.html" class="list-style"><img src="img/setting.png"
+                                            alt="">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="log-h">
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="list-style"><i class="bi bi-power"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-nav">
+                    <div class="d-flex align-items-center justify-content-between px-xl-4 px-2 py-3 bg-white shadow-sm">
+                        <div class="d-flex align-items-center wid-1">
+                            <div class="d-flex align-items-center">
+                                <button class="border-0 bar-s" id="bars"><i class="fa-solid fa-bars"></i></button>
+                            </div>
+                            <div class="w-100">
+                                <form action="">
+                                    <div class="d-flex align-items-center">
+                                        <label for="search"><img src="img/search.png" alt=""></label>
+                                        <input type="text" class="search-input px-2 w-100" id="search"
+                                            placeholder="Search">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="wid-2 position-relative text-end">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="position-relative d-vector">
+                                    <a href="notification.html" class=""><img src="img/notification.png" alt=""></a>
+                                    <div class="point-1"></div>
+                                </div>
+                                <div class="position-relative d-vector">
+                                    <a href="employee-profile.html" class=""><img src="/img/profile.png" alt=""
+                                            class="pro-img"></a>
+                                    <div class="point"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3">
+                        <div class="content">
+                            <div class="py-3 px-2 d-flex flex-column h-100">
+                                <div class="d-md-flex flex-wrap justify-content-between align-items-center">
+                                    <div>
+                                        <h3>Users</h3>
+                                        <p class="mb-0 grey">Information about all Users</p>
+                                    </div>
+                                    <div class="mt-3 mt-md-0 d-flex justify-content-end">
+                                        <a href="#" class="text-decoration-none green-btn" data-bs-toggle="modal"
+                                        data-bs-target="#useraddmodal">
+                                            Add New User
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="table-responsive mt-3 mb-4">
+                                    <table class="table tbl">
+                                        <thead class="tbl-head">
+                                            <tr class="align-middle">
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Role</th>
+                                                <th>University</th>
+                                                <th>Contact</th>
+                                                <th>Action</th>
+                                                <th>More</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-space border-0"></tr>
+                                            <tr class="align-middle">
+                                                <td>127</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <div class="me-3">
+                                                            <img src="/img/uni-pic.png" alt="pic" class="round-img">
+                                                        </div>
+                                                        <p class="mb-0">Anglen Anderson</p>
+                                                    </div>
+                                                </td>
+                                                <td>Admin</td>
+                                                <td>University of Euthopia</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <a href="#">
+                                                            <div
+                                                                class="me-3 bg-green-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/Call.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                        <a href="#">
+                                                            <div
+                                                                class="bg-green-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/msg.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#usereditmodal">
+                                                            <div
+                                                                class="me-3 bg-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/edit-piccc.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#user">
+                                                            <div
+                                                                class="bg-red-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/delete-piccc.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <a href="#">
+                                                            <div
+                                                                class="bg-dots d-flex justify-content-center align-items-center">
+                                                                <img src="/img/dots-Group.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>127</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <div class="me-3">
+                                                            <img src="/img/uni-pic.png" alt="pic" class="round-img">
+                                                        </div>
+                                                        <p class="mb-0">Anglen Anderson</p>
+                                                    </div>
+                                                </td>
+                                                <td>Staff</td>
+                                                <td>University of Euthopia</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <a href="#">
+                                                            <div
+                                                                class="me-3 bg-green-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/Call.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                        <a href="#">
+                                                            <div
+                                                                class="bg-green-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/msg.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                        data-bs-target="#usereditmodal">
+                                                            <div
+                                                                class="me-3 bg-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/edit-piccc.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#user">
+                                                            <div
+                                                                class="bg-red-icon d-flex justify-content-center align-items-center">
+                                                                <img src="/img/delete-piccc.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <a href="#">
+                                                            <div
+                                                                class="bg-dots d-flex justify-content-center align-items-center">
+                                                                <img src="/img/dots-Group.svg" alt="pic" class="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="pag mt-auto d-flex justify-content-center justify-content-sm-end">
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                            <li class="page-item me-2" id="prev">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <i class="fa-solid fa-arrow-left"></i> Previous
+                                                </a>
+                                            </li>
+                                            <li class="page-item active" data-page="1">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item" data-page="2">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item" data-page="3">
+                                                <a class="page-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item ms-2" id="next">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    Next <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="usereditmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-width">
+            <div class="modal-content">
+                <div class="modal-header border-0 d-flex justify-content-end">
+                    <button type="button" class=" modal-close focus-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <h4 class="mb-2 color-blue text-center">Edit User</h4>
+                    <form action="users.html">
+                        <div class="main-pic d-flex justify-content-center mb-3">
+                            <label for="imageedituser" class="imguni"><img src="/img/useruni.svg" id="imageedituserpreview"
+                                    class="imguni"><i class="fa-solid fa-circle-plus plus"></i></label>
+                            <input type="file" id="imageedituser" class="fileinput">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="fname" class="form-label">First Name:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="fname"
+                                        placeholder="Jhon">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="lname" class="form-label">Last Name:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="lname"
+                                        placeholder="Andersion">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="phoneuni" class="form-label">Phone Number(Optional):</label>
+                                    <input type="tel" class="form-control focus-none p-2 form-bg" id="phoneuni"
+                                        placeholder="12345678">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="unimail" class="form-label">Email:</label>
+                                    <input type="email" class="form-control focus-none p-2 form-bg" id="unimail"
+                                        placeholder="Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="Type" class="form-label">Role:</label>
+                                    <select class="form-select focus-none p-2 form-bg" id="Type">
+                                        <option value="admin">Admin</option>
+                                        <option value="client">Client</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="uni" class="form-label">University:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="uni"
+                                        placeholder="University">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input check-uni focus-none" type="checkbox"
+                                        id="uniCheckbox">
+                                    <label class="form-check-label" for="uniCheckbox">Lorem ipsum dolor sit amet
+                                        consector</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn-save">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="useraddmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-width">
+            <div class="modal-content">
+                <div class="modal-header border-0 d-flex justify-content-end">
+                    <button type="button" class=" modal-close focus-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <h4 class="mb-2 color-blue text-center">Add New User</h4>
+                    <form action="users.html">
+                        <div class="main-pic d-flex justify-content-center mb-3">
+                            <label for="imageadduser" class="imguni"><img src="/img/useruni.svg" id="imageadduserpreview"
+                                    class="imguni"><i class="fa-solid fa-circle-plus plus"></i></label>
+                            <input type="file" id="imageadduser" class="fileinput">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="firstname" class="form-label">First Name:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="firstname"
+                                        placeholder="Jhon">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="lastname" class="form-label">Last Name:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="lastname"
+                                        placeholder="Andersion">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="phoneadd" class="form-label">Phone Number(Optional):</label>
+                                    <input type="tel" class="form-control focus-none p-2 form-bg" id="phoneadd"
+                                        placeholder="12345678">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addmail" class="form-label">Email:</label>
+                                    <input type="email" class="form-control focus-none p-2 form-bg" id="addmail"
+                                        placeholder="Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addtype" class="form-label">Role:</label>
+                                    <select class="form-select focus-none p-2 form-bg" id="addtype">
+                                        <option value="admin">Admin</option>
+                                        <option value="client">Client</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="uniadd" class="form-label">University:</label>
+                                    <input type="text" class="form-control focus-none p-2 form-bg" id="uniadd"
+                                        placeholder="University">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input check-uni focus-none" type="checkbox"
+                                        id="uniaddCheckbox">
+                                    <label class="form-check-label" for="uniaddCheckbox">Lorem ipsum dolor sit amet
+                                        consector</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="submit" class="btn-save">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="user" tabindex="-1" aria-labelledby="userLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5 green" id="userLabel">Are You Sure To Delete this
+                        user?</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                            <input type="checkbox" id="user-checkbox" class="form-check-input check-uni focus-none">
+                        <label for="user-checkbox" class="form-check-label">Lorem ipsum dolor sit amet</label>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="del-btn" data-bs-dismiss="modal">(02) Delete</button>
+                    <button type="button" class="can-btn" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
+    <script>
+          let adduploadimg = document.getElementById('imageadduser');
+        let addpreviewimg = document.getElementById('imageadduserpreview');
+        adduploadimg.addEventListener('input', function () {
+            let addimgfile = event.target.files[0];
+            addpreviewimg.src = URL.createObjectURL(addimgfile);
+            
+        })
+        let edituploadimg = document.getElementById('imageedituser');
+        let editpreviewimg = document.getElementById('imageedituserpreview');
+        edituploadimg.addEventListener('input', function () {
+            let editimgfile = event.target.files[0];
+            editpreviewimg.src = URL.createObjectURL(editimgfile);
+            
+        })
+    </script>
+</body>
+
+</html>

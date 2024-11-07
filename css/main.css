@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-black-webfont.woff2') format('woff2'),
+         url('../font/poppins-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-bold-webfont.woff2') format('woff2'),
+         url('../font/poppins-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-extrabold-webfont.woff2') format('woff2'),
+         url('../font/poppins-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../font/poppins-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-thin-webfont.woff2') format('woff2'),
+         url('../font/poppins-thin-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-light-webfont.woff2') format('woff2'),
+         url('../font/poppins-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-medium-webfont.woff2') format('woff2'),
+         url('../font/poppins-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/poppins-regular-webfont.woff2') format('woff2'),
+         url('../font/poppins-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body{
+    font-family: 'poppins';
+    background-color: #f2f3f6;
+}
+
+:root{
+    --blue: #00C568;
+    --grey: #92959E;
+    --light-grey: 
+}
+
+.clr-green{
+    color: var(--blue);
+}
+
+.text-orng{
+    color: #FF6A00;
+    background-color: #FFF2E9;
+}
+
+.text-bl{
+    color: #551FFF;
+    background-color: #EDE8FF;
+}
+
+.text-gr{
+    color: #00C568;
+    background-color: #F2FFF0;
+}
+
+.text-lblue{
+    color: #00B7FE;
+    background-color: #EAF9FF;
+}
+
+.light-grey{
+    color: #92959E;
+}
+/* ------sidebar---------- */
+.main-board{
+    max-width: 240px;
+    width: 100%;
+    z-index: 1;
+    border-right: 1px solid #ccc;
+    background-color: var(--blue);
+    z-index: 400;
+}
+
+.main-board1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main-h{
+    height: 100dvh;
+}
+
+.main-nav{
+    width: calc(100% - 240px)
+}
+.logo-img2 {
+    width: 100%;
+    height: 100%;
+    max-width: 105px;
+    object-fit: contain;
+}
+
+.max-h{
+    max-height: 85px;
+    height: 100%;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list-board{
+    height: calc(100dvh - 85px);
+    padding: 15px 12px;
+    overflow-y: auto;
+    margin: 0 6px;
+}
+
+.list-board::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+.list-board::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+      margin-top: 60px;
+      margin-bottom: 60px;
+      border: 1px solid #fff;
+}
+   
+.list-board::-webkit-scrollbar-thumb {
+    background: var(--blue); 
+    border: 1px solid #fff;
+}
+
+.main-log{
+    max-height: 40px;
+    height: 100%;
+    padding: 12px 10px;
+}
+
+.list-style{
+    color: #fff;
+    padding: 8px 14px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.list-ul li:last-child a{
+    margin-bottom: 0;
+}
+
+.list-style.active{
+    background-color: #F2FFF0;
+    color:  #009E52;
+}
+
+.bar-s{
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+    margin-right: 3px;
+    padding: 6px 12px;
+}
+
+.text-x {
+    position: absolute;
+    display: none;
+    padding: 0 12px;
+    color: #fff;
+    right: 0;
+    top: 13px;
+    cursor: pointer;
+}
+
+.log-h{
+    max-height: 50px;
+    padding: 7px 25px
+}
+
+.log-h ul li i{
+    margin-right: 9px;
+    font-size: 18px
+}
+
+.list-style img{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+.search-input{
+    border: none;
+    outline: none;
+}
+
+.pro-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.point{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #56CA00;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    bottom: -3px;
+    right: -3px;
+}
+
+.point-1{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FF4C51;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: 1px;
+    right: -3px;
+}
+
+.d-vector{
+    margin: 0px 9px;
+}
+/* --------------sidebar----------- */
+.content{
+    height: calc(100dvh - 75px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+      margin-top: 60px;
+      margin-bottom: 60px;
+      border: 1px solid #fff;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--blue); 
+    border: 1px solid #fff;
+}
+
+.date-picker-container {
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: max-content;
+}
+
+.date-icon {
+    margin-right: 10px;
+}
+
+.date-picker-input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    width: 245px !important;
+}
+
+.date-picker-input:focus {
+    outline: none;
+}
+
+
+.progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    width: 100%;
+    height: 8px;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.project {
+    width: 40%;
+    background-color: #00C568;
+}
+
+.traveling {
+    width: 40%;
+    background-color: #00B7FE;
+}
+
+.maintenance {
+    width: 20%;
+    background-color: #9747FF;
+}
+
+.font-12{
+    font-size: 12px;
+}
+
+.main-tabs .nav-pills .nav-link{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0px
+}
+
+.main-tabs .nav-pills .nav-link.active{
+    background-color: transparent;
+    color: #00C568;
+    font-weight: 400;
+    border-bottom: 1px solid #00C568
+}
+
+.point-2{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--blue);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: 0;
+    right: -3px;
+}
+
+.file-btn{
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    font-size: 15px;
+}
+
+.certificate-img{
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+}
+
+.img-data{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.data-height{
+    height: calc(100dvh - 120px);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.load-img{
+    width: 100%;
+    height: 100%;
+    max-width: 54px;
+    object-fit: contain;
+}
+
+.h-load{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-text{
+    width: 100%;
+    background-color: #F3F3F3;
+    border: 0;
+    padding: 6px 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+}
+
+.cal-img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/* ============
+  Media Query
+============ */
+
+@media screen and (min-width: 769px){
+    .main-board{
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main-board{
+        position: absolute;
+        height: 100%;
+        display: none;
+    }
+    .main-nav{
+        width: calc(100% - 0px);
+    }
+    .list-board {
+        height: calc(100dvh - 90px);
+    }
+    .bar-s{
+        display: block;
+    }
+    .text-x{
+        display: block;
+    }
+    .max-h {
+        max-height: 90px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 577px){
+    .date-picker-input {
+        font-size: 12px;
+        width: 187px !important;
+    }
+    .data-height {
+        height: calc(100dvh - 175px);
+    }
+}
